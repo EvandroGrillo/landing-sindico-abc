@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Síndico Profissional no ABC Paulista | Diagnóstico Gratuito</title>
+  <meta name="description" content="Síndico profissional para condomínios no ABC Paulista. Plano de ação em 24h, SLA e transparência total. Solicite diagnóstico gratuito." />
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --text:#e9eefc;
+      --muted:#a8b6d8;
+      --brand:#4da3ff;
+      --brand2:#2be4b8;
+      --stroke:rgba(255,255,255,.10);
+      --card:rgba(255,255,255,.04);
+      --shadow:0 18px 55px rgba(0,0,0,.35);
+      --r:18px;
+      --max:1080px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      color:var(--text);
+      background:
+        radial-gradient(900px 600px at 20% 0%, rgba(77,163,255,.22), transparent 55%),
+        radial-gradient(900px 600px at 80% 10%, rgba(43,228,184,.14), transparent 55%),
+        var(--bg);
+      line-height:1.55;
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:22px 18px}
+
+    /* Top */
+    .top{
+      position:sticky; top:0; z-index:10;
+      backdrop-filter: blur(10px);
+      background: rgba(11,18,32,.55);
+      border-bottom:1px solid var(--stroke);
+    }
+    .top .wrap{
+      display:flex; align-items:center; justify-content:space-between;
+    }
+    .logo{
+      display:flex; align-items:center; gap:10px;
+      font-weight:900;
+    }
+    .dot{
+      width:10px;height:10px;border-radius:50%;
+      background:linear-gradient(135deg,var(--brand),var(--brand2));
+    }
+
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:12px 16px;
+      border-radius:12px;
+      border:1px solid var(--stroke);
+      background: rgba(255,255,255,.03);
+      cursor:pointer;
+      font-weight:800;
+    }
+    .btn.primary{
+      border:0;
+      background: linear-gradient(135deg,var(--brand),var(--brand2));
+      color:#06121f;
+      box-shadow: 0 12px 26px rgba(77,163,255,.20);
+    }
+    .btn.ghost{background:transparent}
+
+    .card{
+      background: linear-gradient(180deg,var(--card), rgba(255,255,255,.02));
+      border:1px solid var(--stroke);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+    }
+
+    /* HERO */
+    .hero{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:16px;
+      padding-top:26px;
+    }
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr}
+    }
+    .heroMain{padding:26px}
+    h1{
+      margin:0 0 10px;
+      font-size:40px;
+      line-height:1.08;
+      letter-spacing:-.5px;
+    }
+    @media (max-width:520px){
+      h1{font-size:32px}
+    }
+    .lead{
+      margin:0 0 16px;
+      color:var(--muted);
+      font-size:16px;
+    }
+
+    .heroMedia{
+      margin-top:18px;
+      border-radius:16px;
+      overflow:hidden;
+      border:1px solid var(--stroke);
+      background: rgba(0,0,0,.14);
+    }
+    .heroMedia img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+      opacity:.9;
+      display:block;
+    }
+
+    .chips{
+      margin-top:14px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      font-size:13px;
+      color:var(--muted);
+    }
+    .chip{
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid var(--stroke);
+      background: rgba(255,255,255,.02);
+    }
+
+    /* Steps */
+    .steps{padding:18px}
+    .step{
+      display:flex;
+      gap:10px;
+      padding:12px;
+      border-radius:14px;
+      border:1px solid var(--stroke);
+      margin-bottom:10px;
+      cursor:pointer;
+    }
+    .step.active{
+      border-color: rgba(43,228,184,.45);
+      box-shadow:0 0 0 3px rgba(43,228,184,.10) inset;
+    }
+    .num{
+      width:26px;height:26px;border-radius:10px;
+      display:flex;align-items:center;justify-content:center;
+      background: rgba(77,163,255,.16);
+      font-weight:900;font-size:12px;
+    }
+    .step span{font-size:12px;color:var(--muted)}
+
+    section{padding:22px 0}
+    .title{
+      margin:0 0 10px;
+      font-size:18px;
+    }
+
+    .grid3{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+    }
+    @media (max-width:980px){
+      .grid3{grid-template-columns:1fr}
+    }
+    .mini{padding:16px}
+    .mini p{color:var(--muted);margin:0}
+
+    /* Form */
+    .formCard{padding:20px}
+    label{display:block;font-size:12px;color:var(--muted);margin:10px 0 6px}
+    input, select, textarea{
+      width:100%;
+      padding:12px;
+      border-radius:12px;
+      border:1px solid var(--stroke);
+      background: rgba(0,0,0,.16);
+      color:var(--text);
+    }
+    textarea{min-height:90px}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    @media (max-width:520px){
+      .row{grid-template-columns:1fr}
+    }
+
+    footer{
+      border-top:1px solid var(--stroke);
+      padding:24px 0;
+      color:var(--muted);
+      font-size:13px;
+      margin-top:24px;
+    }
+
+    .page{display:none}
+    .page.show{display:block}
+  </style>
+</head>
+
+<body>
+
+<div class="top">
+  <div class="wrap">
+    <div class="logo"><span class="dot"></span> Síndico Profissional ABC</div>
+    <button class="btn primary" onclick="go('p4')">Solicitar diagnóstico</button>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="card heroMain">
+      <h1>Gestão profissional para condomínios no ABC Paulista</h1>
+      <p class="lead">
+        Ideal para condomínios <b>sem estrutura administrativa</b>.
+        Plano de ação em <b>24h</b>, SLA e transparência mensal.
+      </p>
+
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <button class="btn primary" onclick="go('p1')">Ver benefícios</button>
+        <button class="btn ghost" onclick="go('p4')">Ir direto ao diagnóstico</button>
+      </div>
+
+      <div class="chips">
+        <span class="chip">Transparência</span>
+        <span class="chip">Processos</span>
+        <span class="chip">Controle de custos</span>
+        <span class="chip">Manutenção preventiva</span>
+      </div>
+
+      <!-- IMAGEM DE FACILITIES -->
+      <div class="heroMedia">
+        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1400&q=80"
+             alt="Facilities e manutenção predial em condomínio">
+      </div>
+    </div>
+
+    <!-- STEPS -->
+    <aside class="card steps">
+      <div class="step active" id="s1" onclick="go('p1')">
+        <div class="num">1</div>
+        <div><b>Benefícios</b><br><span>Ganhos imediatos</span></div>
+      </div>
+      <div class="step" id="s2" onclick="go('p2')">
+        <div class="num">2</div>
+        <div><b>Como funciona</b><br><span>Método e segurança</span></div>
+      </div>
+      <div class="step" id="s3" onclick="go('p3')">
+        <div class="num">3</div>
+        <div><b>Oferta</b><br><span>Planos e diferenciais</span></div>
+      </div>
+      <div class="step" id="s4" onclick="go('p4')">
+        <div class="num">4</div>
+        <div><b>Diagnóstico</b><br><span>Contato rápido</span></div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- PAGE 1 -->
+  <div id="p1" class="page show">
+    <section>
+      <h3 class="title">Benefícios claros desde o início</h3>
+      <div class="grid3">
+        <div class="card mini"><b>Organização</b><p>Rotinas, responsáveis e calendário definidos.</p></div>
+        <div class="card mini"><b>Transparência</b><p>Relatórios e comunicação clara com moradores.</p></div>
+        <div class="card mini"><b>Previsibilidade</b><p>Custos e manutenção sob controle.</p></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- PAGE 2 -->
+  <div id="p2" class="page">
+    <section>
+      <h3 class="title">Como funciona</h3>
+      <div class="grid3">
+        <div class="card mini"><b>Diagnóstico</b><p>Financeiro, manutenção e riscos.</p></div>
+        <div class="card mini"><b>Plano 24h</b><p>Prioridades e SLAs.</p></div>
+        <div class="card mini"><b>Execução</b><p>Gestão diária e assembleias.</p></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- PAGE 3 -->
+  <div id="p3" class="page">
+    <section>
+      <h3 class="title">Oferta e diferenciais</h3>
+      <div class="grid3">
+        <div class="card mini"><b>Incluso</b><p>Gestão, fornecedores e relatórios.</p></div>
+        <div class="card mini"><b>Diferencial</b><p>SLA + manutenção preventiva.</p></div>
+        <div class="card mini"><b>Segurança</b><p>Processos e conformidade.</p></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- PAGE 4 -->
+  <div id="p4" class="page">
+    <section>
+      <div class="card formCard">
+        <h3 class="title">Solicite um diagnóstico gratuito</h3>
+
+        <form>
+          <label>Nome</label>
+          <input placeholder="Seu nome">
+
+          <div class="row">
+            <div>
+              <label>WhatsApp</label>
+              <input placeholder="(11) 9xxxx-xxxx">
+            </div>
+            <div>
+              <label>Cidade</label>
+              <select>
+                <option>Selecione</option>
+                <option>Santo André</option>
+                <option>São Bernardo</option>
+                <option>São Caetano</option>
+              </select>
+            </div>
+          </div>
+
+          <button class="btn primary" style="width:100%;margin-top:12px">
+            Enviar e falar no WhatsApp
+          </button>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    Síndico Profissional ABC • CNPJ: __.___.___/____-__ • contato@email.com
+  </footer>
+
+</main>
+
+<script>
+  const pages = ['p1','p2','p3','p4'];
+  const steps = ['s1','s2','s3','s4'];
+  function go(id){
+    pages.forEach(p=>document.getElementById(p).classList.remove('show'));
+    document.getElementById(id).classList.add('show');
+    steps.forEach(s=>document.getElementById(s).classList.remove('active'));
+    document.getElementById('s'+id.substring(1)).classList.add('active');
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+</script>
+
+</body>
+</html>
